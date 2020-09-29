@@ -27,7 +27,7 @@ namespace Location.Worker
                 _httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", API_KEY);
             }
 
-            var url = $"http://pcmiler.alk.com/APIs/REST/v1.0/service.svc/locations?city={request.City}&state={request.State}&postcode={request.PostalCode}&region={request.Region}";
+            var url = $"https://pcmiler.alk.com/APIs/REST/v1.0/service.svc/locations?city={request.City}&state={request.State}&postcode={request.PostalCode}&region={request.Region}";
             var response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
