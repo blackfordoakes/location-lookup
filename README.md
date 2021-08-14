@@ -9,8 +9,25 @@ There are three parts to this project:  a .NET Core Web API, a .NET Core worker,
 ## Requirements
 
 .NET Core
-[RabbitMQ](https://www.rabbitmq.com/)
+[Docker](https://www.docker.com/)
 A PC*Miler Web Services API Key ([get one here](https://developer.trimblemaps.com/))
+
+
+## Running the project
+
+This solution relies on a RabbitMQ instance running inside a Docker container. To launch the container, navigate to the `deployment` directory and run the following command in a command prompt:
+
+```powershell
+docker compose up -d
+```
+
+Next, open the solution in Visual Studio and launch both the Location.API and Location.Worker projects.
+
+When complete, run the following command in the `deployment` directory to stop the RabbitMQ container:
+
+```powershell
+docker compose down
+```
 
 ## Contributing Guidelines
 
