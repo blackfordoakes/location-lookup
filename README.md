@@ -12,7 +12,6 @@ There are three parts to this project:  a .NET Core Web API, a .NET Core worker,
 [Docker](https://www.docker.com/)
 A PC*Miler Web Services API Key ([get one here](https://developer.trimblemaps.com/))
 
-
 ## Running the project
 
 This solution relies on a RabbitMQ instance running inside a Docker container. To launch the container, navigate to the `deployment` directory and run the following command in a command prompt:
